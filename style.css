@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* body {
+  min-height: 100vh;
+  background-image: url('check.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+
+.padding {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+}
+
+/* .formcon {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-in-out;
+} */
+.formcon {
+  background: rgb(255, 255, 255); 
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+} 
+
+/* Fade-in animation for form */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Container */
+.container {
+  margin-bottom: 20px;
+}
+
+/* Floating Labels */
+.entryarea {
+  position: relative;
+  margin-top: 15px;
+}
+
+.entryarea input[type="text"],
+.entryarea input[type="email"],
+.entryarea input[type="number"],
+.entryarea input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.entryarea input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102,126,234,0.4);
+}
+
+/* Label animation */
+.label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 0 6px;
+  color: #888;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.entryarea input:focus + .label,
+.entryarea input:not(:placeholder-shown) + .label {
+  top: -8px;
+  font-size: 12px;
+  color: #667eea;
+}
+
+/* Section Titles */
+.section-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 15px;
+}
+
+/* Radio & Checkbox Styling */
+.choices input[type="radio"],
+.choices input[type="checkbox"] {
+  display: none;
+}
+
+.choices label {
+  position: relative;
+  padding: 8px 15px;
+  margin: 5px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.choices input:checked + label {
+  background: #667eea;
+  color: #fff;
+  border-color: #667eea;
+  transform: scale(1.05);
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+/* File upload container fix */
+.container.file-upload {
+  display: flex;
+  flex-direction: column;
+}
+
+.container.file-upload .label {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.container.file-upload .entryarea input[type="file"] {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  background: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+.container.file-upload .entryarea input[type="file"]:hover {
+  border-color: #667eea;
+}
+/* Hide the ugly default file input */
+.entryarea input[type="file"] {
+  display: none;
+}
+
+/* Create a custom styled label that acts as the file button */
+.custom-file-label {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.custom-file-label:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Show selected file name */
+#file-chosen {
+  margin-left: 12px;
+  font-size: 14px;
+  color: #444;
+}
+/* Hide the ugly default file input */
+.entryarea input[type="file"] {
+  display: none;
+}
+
+/* Create a custom styled label that acts as the file button */
+.custom-file-label {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.custom-file-label:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Show selected file name */
+#file-chosen {
+  margin-left: 12px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* pop */
+
+/* Background overlay */
+.popup {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1111;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.45); /* darker background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Popup box */
+.popup-content {
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 320px;
+  max-width: 95vw;
+  position: relative;
+  transform: scale(0.8);
+  opacity: 0;
+  animation: popIn 0.4s ease forwards;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px; right: 16px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #444;
+  transition: transform 0.2s;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+  color: #ff3b3b;
+}
+
+/* QR Code */
+.qr-code {
+  width: 150px;
+  height: 150px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.qr-code:hover {
+  transform: scale(1.05);
+}
+
+/* WhatsApp Button */
+.wa-btn {
+  display: inline-block;
+  background: #25d366;
+  color: #fff !important;
+  padding: 12px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+  transition: all 0.25s ease;
+}
+
+.wa-btn:hover {
+  background: #128c7e;
+  transform: translateY(-2px);
+}
+
+/* Fade and Pop Animations */
+@keyframes fadeIn {
+  from { background: rgba(0,0,0,0); }
+  to { background: rgba(0,0,0,0.45); }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

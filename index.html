@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="feedback.png" type="image/x-icon" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="padding">
+      <form id="form" class="formcon">
+        
+        <div class="container">
+          <div class="entryarea">
+            <input type="text" id="name" name="name" placeholder=" " required />
+            <label for="name" class="label">Enter your Name</label>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="entryarea">
+            <input type="email" id="email" name="email" placeholder=" " required />
+            <label for="email" class="label">Enter your Email</label>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="entryarea">
+            <input type="number" id="phone" name="number" placeholder=" " required />
+            <label for="phone" class="label">Enter your Phone Number</label>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="entryarea">
+            <input type="text" id="clgname" name="clgname" placeholder=" " required />
+            <label for="clgname" class="label">College Name</label>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="entryarea">
+            <input type="text" id="depname" name="depname" placeholder=" " required />
+            <label for="depname" class="label">Department Name</label>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="section-title">Year</div>
+          <div class="entryarea choices">
+            <input type="radio" id="yr1" name="year" value="I" />
+            <label for="yr1">I Year</label>
+            <input type="radio" id="yr2" name="year" value="II" />
+            <label for="yr2">II Year</label>
+            <input type="radio" id="yr3" name="year" value="III" />
+            <label for="yr3">III Year</label>
+            <input type="radio" id="yr4" name="year" value="VI" />
+            <label for="yr4">IV Year</label>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="section-title">Select Technical Event(s)</div>
+          <div class="entryarea choices">
+            <input type="checkbox" id="tevent1" name="event" value="Code2Dribbles" />
+            <label for="tevent1">Code 2 Dribbles</label>
+            <input type="checkbox" id="tevent2" name="event" value="IdeaXplore" />
+            <label for="tevent2">Idea Xplore</label>
+            <input type="checkbox" id="tevent3" name="event" value="BreakAwayMystiCode" />
+            <label for="tevent3">Break Away Mysti Code</label>
+            <input type="checkbox" id="tevent4" name="event" value="BugBusterPuzzleCoders" />
+            <label for="tevent4">Bug Buster Puzzle Coders</label>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="section-title">Select Non-Technical Event(s)</div>
+          <div class="entryarea choices">
+            <input type="checkbox" id="nevent1" name="nevent" value="BrainFreeze" />
+            <label for="nevent1">Brain Freeze</label>
+            <input type="checkbox" id="nevent2" name="nevent" value="MemeDemon" />
+            <label for="nevent2">Meme Demon’s</label>
+            <input type="checkbox" id="nevent3" name="nevent" value="VideWaves" />
+            <label for="nevent3">Vide Waves</label>
+            <input type="checkbox" id="nevent4" name="nevent" value="LinkItUp" />
+            <label for="nevent4">Link It Up</label>
+          </div>
+        </div>
+
+        <div class="container file-upload">
+          <label class="label">Upload Payment screenshot</label>
+          <div class="entryarea">
+            <input type="file" id="screenshot" name="screenshot" accept="image/*" />
+            <label for="screenshot" class="custom-file-label">Choose File</label>
+            <span id="file-chosen">No file chosen</span>
+          </div>
+        </div>
+
+
+
+        <button type="submit">Submit</button>
+      </form>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn" id="closePopup">&times;</span>
+          <h2>Thank you for registering!</h2>
+          <p>Join our WhatsApp Group for latest updates:</p>
+          <img src="qr.png" alt="WhatsApp QR" class="qr-code" />
+          <a href="https://chat.whatsapp.com/HO6QHQ956o510j8ewx0By4?mode=ems_copy_t" target="_blank" class="wa-btn">Join WhatsApp Group</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
