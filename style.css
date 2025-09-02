@@ -245,7 +245,7 @@ button:hover {
 
 /* Background overlay */
 .popup {
-  display: none; 
+  display: none; /* hidden by default */
   position: fixed;
   z-index: 1111;
   left: 0; top: 0;
