@@ -245,13 +245,12 @@ button:hover {
 
 /* Background overlay */
 .popup {
-  display: none; /* hidden by default */
+  display: none; 
   position: fixed;
   z-index: 1111;
   left: 0; top: 0;
   width: 100vw; height: 100vh;
   background: rgba(0,0,0,0.45); /* darker background */
-  display: flex;
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.4s ease forwards;
