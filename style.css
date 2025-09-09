@@ -7,10 +7,26 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  /* background: linear-gradient(135deg, #667eea, #764ba2); */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.viedo-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* behind everything */
+  overflow: hidden;
+}
+
+.viedo-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures video covers screen */
 }
 
 /* body {
@@ -39,11 +55,11 @@ body {
   animation: fadeIn 1s ease-in-out;
 } */
 .formcon {
-  background: rgb(255, 255, 255); 
+  background: rgba(255, 255, 255, 0.491); 
   padding: 25px 30px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(10px); 
 } 
 
@@ -78,7 +94,7 @@ body {
 }
 
 .entryarea input:focus {
-  border-color: #667eea;
+  border-color: #233f78;
   box-shadow: 0 0 8px rgba(102,126,234,0.4);
 }
 
@@ -89,6 +105,7 @@ body {
   left: 12px;
   transform: translateY(-50%);
   background: #fff;
+  border-radius: 3px;
   padding: 0 6px;
   color: #888;
   pointer-events: none;
@@ -97,9 +114,10 @@ body {
 
 .entryarea input:focus + .label,
 .entryarea input:not(:placeholder-shown) + .label {
-  top: -8px;
+  top: -2px;
   font-size: 12px;
-  color: #667eea;
+  color: rgb(250, 214, 147);
+  background: linear-gradient(135deg, #233f78, #4089c4); 
 }
 
 /* Section Titles */
@@ -128,9 +146,10 @@ body {
 }
 
 .choices input:checked + label {
-  background: #667eea;
-  color: #fff;
-  border-color: #667eea;
+  /* background: #ff000d; */
+  background: linear-gradient(135deg, #233f78, #4089c4); 
+  color: wheat;
+  /* border-color: #667eea; */
   transform: scale(1.05);
 }
 
@@ -138,7 +157,7 @@ body {
 button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #233f78, #4089c4); 
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -187,7 +206,7 @@ button:hover {
 /* Create a custom styled label that acts as the file button */
 .custom-file-label {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #233f78, #4089c4); 
   color: #fff;
   padding: 10px 18px;
   border-radius: 8px;
@@ -198,7 +217,7 @@ button:hover {
 }
 
 .custom-file-label:hover {
-  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+  background: linear-gradient(135deg, #233f78, #4089c4); 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
@@ -217,7 +236,7 @@ button:hover {
 /* Create a custom styled label that acts as the file button */
 .custom-file-label {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #233f78, #4089c4); 
   color: #fff;
   padding: 10px 18px;
   border-radius: 8px;
@@ -228,7 +247,7 @@ button:hover {
 }
 
 .custom-file-label:hover {
-  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+  background: linear-gradient(135deg, #233f78, #4089c4); 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
